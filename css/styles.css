@@ -1,0 +1,172 @@
+/* Базові налаштування для сторінки */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ховаємо все, що виходить за межі екрану */
+}
+
+/* Створення фону зоряного неба */
+.universe {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Стиль для Сонця */
+.sun {
+  width: 80px;
+  height: 80px;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  box-shadow: 0 0 60px #ffc107, 0 0 90px #ff9800; /* Ефект світіння */
+  position: absolute;
+}
+
+/* Загальний стиль для орбіт */
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  /* Анімація обертання */
+  animation: rotate linear infinite;
+}
+
+/* Загальний стиль для планет */
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  /* Розміщуємо планету на орбіті */
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+/* --- Розміри орбіт та тривалість анімації --- */
+/* Тривалість обертання підібрана для візуального ефекту, а не за реальним часом */
+.mercury-orbit {
+  width: 120px;
+  height: 120px;
+  animation-duration: 8.8s;
+}
+.venus-orbit {
+  width: 180px;
+  height: 180px;
+  animation-duration: 22.5s;
+}
+.earth-orbit {
+  width: 250px;
+  height: 250px;
+  animation-duration: 36.5s;
+}
+.mars-orbit {
+  width: 320px;
+  height: 320px;
+  animation-duration: 68.7s;
+}
+.jupiter-orbit {
+  width: 450px;
+  height: 450px;
+  animation-duration: 100s;
+}
+.saturn-orbit {
+  width: 580px;
+  height: 580px;
+  animation-duration: 150s;
+}
+.uranus-orbit {
+  width: 690px;
+  height: 690px;
+  animation-duration: 200s;
+}
+.neptune-orbit {
+  width: 780px;
+  height: 780px;
+  animation-duration: 250s;
+}
+
+/* --- Стилі для кожної планети --- */
+.mercury {
+  width: 8px;
+  height: 8px;
+  background-color: #a9a9a9;
+}
+.venus {
+  width: 14px;
+  height: 14px;
+  background-color: #e6d3a2;
+}
+.earth {
+  width: 16px;
+  height: 16px;
+  background-color: #2f7de1;
+}
+.mars {
+  width: 12px;
+  height: 12px;
+  background-color: #c1440e;
+}
+.jupiter {
+  width: 35px;
+  height: 35px;
+  background-color: #d8caaf;
+}
+.uranus {
+  width: 22px;
+  height: 22px;
+  background-color: #afdbf5;
+}
+.neptune {
+  width: 20px;
+  height: 20px;
+  background-color: #3f54ba;
+}
+
+/* Стилі для Сатурна та його кілець */
+.saturn {
+  width: 28px;
+  height: 28px;
+  background-color: #e3dccb;
+  position: relative;
+}
+
+.ring {
+  position: absolute;
+  width: 160%;
+  height: 160%;
+  border: 3px solid rgba(211, 211, 211, 0.7);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(70deg); /* Нахил кільця */
+}
+
+/* Анімація, що обертає орбіти */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

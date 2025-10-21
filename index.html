@@ -2,13 +2,62 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-js-hw-01</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Анімована Сонячна система</title>
   </head>
   <body>
-    <script src="./js/task-1.js"></script>
-    <script src="./js/task-2.js"></script>
-    <script src="./js/task-3.js"></script>
+    <!-- Контейнер для всього космічного простору -->
+    <div class="universe">
+      <!-- Центральний елемент - Сонце -->
+      <div class="sun"></div>
+
+      <!-- Орбіта та планета: Меркурій -->
+      <div class="orbit mercury-orbit">
+        <div class="planet mercury" data-planet="Меркурій"></div>
+      </div>
+
+      <!-- Орбіта та планета: Венера -->
+      <div class="orbit venus-orbit">
+        <div class="planet venus" data-planet="Венера"></div>
+      </div>
+
+      <!-- Орбіта та планета: Земля -->
+      <div class="orbit earth-orbit">
+        <div class="planet earth" data-planet="Земля"></div>
+      </div>
+
+      <!-- Орбіта та планета: Марс -->
+      <div class="orbit mars-orbit">
+        <div class="planet mars" data-planet="Марс"></div>
+      </div>
+
+      <!-- Орбіта та планета: Юпітер -->
+      <div class="orbit jupiter-orbit">
+        <div class="planet jupiter" data-planet="Юпітер"></div>
+      </div>
+
+      <!-- Орбіта та планета: Сатурн з кільцями -->
+      <div class="orbit saturn-orbit">
+        <div class="planet saturn" data-planet="Сатурн">
+          <div class="ring"></div>
+        </div>
+      </div>
+
+      <!-- Орбіта та планета: Уран -->
+      <div class="orbit uranus-orbit">
+        <div class="planet uranus" data-planet="Уран"></div>
+      </div>
+
+      <!-- Орбіта та планета: Нептун -->
+      <div class="orbit neptune-orbit">
+        <div class="planet neptune" data-planet="Нептун"></div>
+      </div>
+    </div>
+
+    <!-- Інформаційна панель з таблицею -->
+
+    <!-- Підключення JavaScript файлу -->
+    <script src="script.js"></script>
   </body>
 </html>
